@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <BasePlatoon :bullets="bullets">
-      <h2 slot="title-bottom">Platoon A</h2>
-    </BasePlatoon>
-  </div>
+  <BasePlatoon :bullets="bullets">
+    <h2 slot="title-bottom">Platoon A</h2>
+  </BasePlatoon>
 </template>
 
 <script>
@@ -13,11 +11,10 @@ export default {
   components: {
     BasePlatoon,
   },
-  props: {
-    bullets: {
-      type: Number,
-      default: 0,
-    },
+  data() {
+    return {
+      bullets: 30000,
+    };
   },
 };
 </script>
