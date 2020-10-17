@@ -1,6 +1,9 @@
 <template>
   <BasePlatoon :bullets="bulletCount">
     <h2 slot="title-bottom">Platoon A</h2>
+    <p slot="other-platoon">
+      Command center got {{ commandCenterBulletCount }} bullets
+    </p>
   </BasePlatoon>
 </template>
 
@@ -14,6 +17,9 @@ export default {
   computed: {
     bulletCount() {
       return this.$store.state.bulletsPlatoonA;
+    },
+    commandCenterBulletCount() {
+      return this.$store.state.bulletsCommandCenter;
     },
   },
 };

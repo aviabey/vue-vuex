@@ -1,5 +1,8 @@
 <template>
-  <BasePlatoon :bullets="bulletCount">
+  <BasePlatoon
+    :bullets="bulletCount"
+    @bulletCountChanged="updateBulletCount($event)"
+  >
     <h1 slot="title-top">Command Center</h1>
   </BasePlatoon>
 </template>
@@ -14,6 +17,11 @@ export default {
   computed: {
     bulletCount() {
       return this.$store.state.bulletsCommandCenter;
+    },
+  },
+  methods: {
+    updateBulletCount(event) {
+      this.$store.dispatch("UpdateCommandCenterBulletCount", event);
     },
   },
 };

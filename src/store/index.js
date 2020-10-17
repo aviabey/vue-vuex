@@ -20,7 +20,15 @@ export default new Vuex.Store({
       return state.bulletsPlatoonB;
     },
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    UpdateCommandCenterBulletCount(state, newCount) {
+      state.bulletsCommandCenter = newCount;
+    }
+  },
+  actions: {
+    UpdateCommandCenterBulletCount(context, newCount) {
+      context.commit('UpdateCommandCenterBulletCount', newCount)
+    }
+  },
   modules: {}
 });
