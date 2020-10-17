@@ -1,25 +1,16 @@
 <template>
   <div>
-    <h2>Command Center</h2>
+    <h2>Platoon A</h2>
     <h3>Bullets: {{ bullets }}</h3>
     <h4>Enough For: {{ timeNeedForReSupply }} hours</h4>
-    <PlattonA></PlattonA>
-    <PlattonB></PlattonB>
   </div>
 </template>
 
 <script>
-import PlattonA from "@/components/PlattonA.vue";
-import PlattonB from "@/components/PlattonB.vue";
-
 export default {
-  components: {
-    PlattonA,
-    PlattonB
-  },
   data() {
     return {
-      bullets: 200000,
+      bullets: 30000,
     };
   },
   computed: {
