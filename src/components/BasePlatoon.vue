@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <slot name="title-top"/>
+  <div class="border border-primary px-4 mb-3">
+    <slot name="title-top" />
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default"
@@ -18,7 +18,7 @@
     <h4 class="mt-1 mb-4">
       Enough For: {{ $_IntelligentMixin_timeNeedForReSupply }} hours
     </h4>
-    <slot name="title-bottom"/>
+    <slot name="title-bottom" />
   </div>
 </template>
 

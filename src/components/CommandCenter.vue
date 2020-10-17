@@ -2,9 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <BasePlatoon :bullets="bullets">
-          <h1 slot="title-top">Command Center</h1>
-        </BasePlatoon>
+        <div>
+          <BasePlatoon :bullets="bullets">
+            <h1 slot="title-top">Command Center</h1>
+          </BasePlatoon>
+        </div>
       </div>
     </div>
     <div class="row">
