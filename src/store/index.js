@@ -4,7 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    bulletsCommandCenter: 200000
+  },
+  getters: {
+    bulletsCommandCenter: state => {
+      return state.bulletsCommandCenter;
+    }
+  },
   mutations: {},
   actions: {},
   modules: {}
