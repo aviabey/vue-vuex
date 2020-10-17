@@ -19,6 +19,7 @@
       Enough For: {{ $_IntelligentMixin_timeNeedForReSupply }} hours
     </h4>
     <slot name="title-bottom" />
+    <slot name="other-platoon" />
   </div>
 </template>
 

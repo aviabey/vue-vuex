@@ -5,16 +5,20 @@
         <div>
           <BasePlatoon :bullets="bullets">
             <h1 slot="title-top">Command Center</h1>
+            <dir slot="other-platoon">
+              <p>Platoon A got {{ bulletsPlatoonA }} bullets</p>
+              <p>Platoon B got {{ bulletsPlatoonB }} bullets</p>
+            </dir>
           </BasePlatoon>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm">
-        <PlattonA></PlattonA>
+        <PlattonA :bullets="bulletsPlatoonA"></PlattonA>
       </div>
       <div class="col-sm">
-        <PlattonB></PlattonB>
+        <PlattonB :bullets="bulletsPlatoonB"></PlattonB>
       </div>
     </div>
   </div>
@@ -34,6 +38,8 @@ export default {
   data() {
     return {
       bullets: 200000,
+      bulletsPlatoonA: 30000,
+      bulletsPlatoonB: 20000,
     };
   },
 };

@@ -13,10 +13,11 @@ export default {
   components: {
     BasePlatoon,
   },
-  data() {
-    return {
-      bullets: 20000,
-    };
+  props: {
+    bullets: {
+      type: Number,
+      default: 0,
+    },
   },
 };
 </script>
