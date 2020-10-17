@@ -15,10 +15,7 @@
     </div>
     <div class="row">
       <div class="col-sm">
-        <PlattonA
-          :bullets="bulletsPlatoonA"
-          @bulletCountChanged="updateBulletCountA($event)"
-        ></PlattonA>
+        <PlattonA :bullets="bulletsPlatoonA"></PlattonA>
       </div>
       <div class="col-sm">
         <PlattonB :bullets="bulletsPlatoonB"></PlattonB>
@@ -44,11 +41,6 @@ export default {
       bulletsPlatoonA: 30000,
       bulletsPlatoonB: 20000,
     };
-  },
-  methods: {
-    updateBulletCountA(event) {
-      this.bulletsPlatoonA = event;
-    },
   },
 };
 </script>

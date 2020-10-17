@@ -1,9 +1,6 @@
 <template>
   <div>
-    <BasePlatoon
-      :bullets="bullets"
-      @bulletCountChanged="notifyBulletCountChange($event)"
-    >
+    <BasePlatoon :bullets="bullets">
       <h2 slot="title-bottom">Platoon A</h2>
     </BasePlatoon>
   </div>
@@ -20,11 +17,6 @@ export default {
     bullets: {
       type: Number,
       default: 0,
-    },
-  },
-  methods: {
-    notifyBulletCountChange(event) {
-      this.$emit("bulletCountChanged", event);
     },
   },
 };
