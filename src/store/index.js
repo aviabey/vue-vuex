@@ -23,11 +23,23 @@ export default new Vuex.Store({
   mutations: {
     UpdateCommandCenterBulletCount(state, newCount) {
       state.bulletsCommandCenter = newCount;
+    },
+    UpdatePlatoonABulletCount(state, newCount) {
+      state.bulletsPlatoonA = newCount;
+    },
+    UpdatePlatoonBBulletCount(state, newCount) {
+      state.bulletsPlatoonB = newCount;
     }
   },
   actions: {
     UpdateCommandCenterBulletCount(context, newCount) {
       context.commit('UpdateCommandCenterBulletCount', newCount)
+    },
+    UpdatePlatoonABulletCount(context, newCount) {
+      context.commit('UpdatePlatoonABulletCount', newCount)
+    },
+    UpdatePlatoonBBulletCount(context, newCount) {
+      context.commit('UpdatePlatoonBBulletCount', newCount)
     }
   },
   modules: {}

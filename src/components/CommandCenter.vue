@@ -4,6 +4,14 @@
     @bulletCountChanged="updateBulletCount($event)"
   >
     <h1 slot="title-top">Command Center</h1>
+    <div slot="other-platoon">
+      <p>
+        Platoon A got {{ platoonABulletCount }} bullets
+      </p>
+      <p>
+        Platoon B got {{ platoonBBulletCount }} bullets
+      </p>
+    </div>
   </BasePlatoon>
 </template>
 
@@ -17,6 +25,12 @@ export default {
   computed: {
     bulletCount() {
       return this.$store.state.bulletsCommandCenter;
+    },
+    platoonABulletCount() {
+      return this.$store.state.bulletsPlatoonA;
+    },
+    platoonBBulletCount() {
+      return this.$store.state.bulletsPlatoonB;
     },
   },
   methods: {
