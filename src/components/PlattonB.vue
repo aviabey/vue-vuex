@@ -1,13 +1,18 @@
 <template>
   <div>
-    <h2>Platoon B</h2>
-    <h3>Bullets: {{ bullets }}</h3>
-    <h4>Enough For: {{ timeNeedForReSupply }} hours</h4>
+    <BasePlatoon :bullets="bullets">
+      <h2>Platoon B</h2>
+    </BasePlatoon>
   </div>
 </template>
 
 <script>
+import BasePlatoon from '@/components/BasePlatoon.vue';
+
 export default {
+  components: {
+    BasePlatoon,
+  },
   data() {
     return {
       bullets: 20000,
