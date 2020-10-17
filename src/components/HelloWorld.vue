@@ -8,6 +8,9 @@
         >vue-cli documentation</a
       >.
     </p>
+
+    <button class="btn btn-primary">I'm a large Bootstrap button</button>
+
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
