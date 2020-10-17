@@ -2,22 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <h2>Command Center</h2>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default"
-              >Bullets</span
-            >
-          </div>
-          <input
-            type="Number"
-            v-model="bullets"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
-        </div>
-        <h4 class="mt-1 mb-4">Enough For: {{ timeNeedForReSupply }} hours</h4>
+          <BasePlatoon :bullets="bullets">
+            <h2>Command Center</h2>
+          </BasePlatoon>
       </div>      
     </div>
     <div class="row">
@@ -34,11 +21,13 @@
 <script>
 import PlattonA from "@/components/PlattonA.vue";
 import PlattonB from "@/components/PlattonB.vue";
+import BasePlatoon from '@/components/BasePlatoon.vue';
 
 export default {
   components: {
     PlattonA,
-    PlattonB
+    PlattonB,
+    BasePlatoon
   },
   data() {
     return {
