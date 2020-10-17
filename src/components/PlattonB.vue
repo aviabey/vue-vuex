@@ -2,7 +2,6 @@
   <div>
     <BasePlatoon :bullets="bullets">
       <h2 slot="title-bottom">Platoon B</h2>
-      <p slot="other-platoon">Platoon A got {{ bulletsA }} bullets</p>
     </BasePlatoon>
   </div>
 </template>
@@ -16,10 +15,6 @@ export default {
   },
   props: {
     bullets: {
-      type: Number,
-      default: 0,
-    },
-    bulletsA: {
       type: Number,
       default: 0,
     },

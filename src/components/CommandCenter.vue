@@ -21,7 +21,7 @@
         ></PlattonA>
       </div>
       <div class="col-sm">
-        <PlattonB :bullets="bulletsPlatoonB" :bulletsA="bulletsPlatoonA"></PlattonB>
+        <PlattonB :bullets="bulletsPlatoonB"></PlattonB>
       </div>
     </div>
   </div>
