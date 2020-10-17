@@ -1,5 +1,5 @@
 <template>
-  <BasePlatoon :bullets="bullets">
+  <BasePlatoon :bullets="bulletCount">
     <h2 slot="title-bottom">Platoon B</h2>
   </BasePlatoon>
 </template>
@@ -11,10 +11,10 @@ export default {
   components: {
     BasePlatoon,
   },
-  data() {
-    return {
-      bullets: 20000,
-    };
+  computed: {
+    bulletCount() {
+      return this.$store.state.bulletsPlatoonB;
+    },
   },
 };
 </script>
