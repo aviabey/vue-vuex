@@ -1,10 +1,33 @@
 <template>
-  <div>
-    <h2>Command Center</h2>
-    <h3>Bullets: {{ bullets }}</h3>
-    <h4>Enough For: {{ timeNeedForReSupply }} hours</h4>
-    <PlattonA></PlattonA>
-    <PlattonB></PlattonB>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h2>Command Center</h2>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Bullets</span
+            >
+          </div>
+          <input
+            type="Number"
+            v-model="bullets"
+            class="form-control"
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <h4 class="mt-1 mb-4">Enough For: {{ timeNeedForReSupply }} hours</h4>
+      </div>      
+    </div>
+    <div class="row">
+        <div class="col-sm">
+        <PlattonA></PlattonA>
+      </div>
+      <div class="col-sm">
+        <PlattonB></PlattonB>
+      </div>
+    </div>
   </div>
 </template>
 
