@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     bulletCountChanged(event) {
-      this.bullets = this.bulletCount;
+      this.$emit("bulletCountChanged", Number(event.target.value));
     },
   },
 };
