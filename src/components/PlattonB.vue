@@ -1,7 +1,7 @@
 <template>
   <div>
     <BasePlatoon :bullets="bullets">
-      <h2>Platoon B</h2>
+      <h2 slot="title-bottom">Platoon B</h2>
     </BasePlatoon>
   </div>
 </template>
