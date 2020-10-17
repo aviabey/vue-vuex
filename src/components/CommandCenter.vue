@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm">
           <BasePlatoon :bullets="bullets">
-            <h2>Command Center</h2>
+            <h1>Command Center</h1>
           </BasePlatoon>
       </div>      
     </div>
