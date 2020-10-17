@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-          <BasePlatoon :bullets="bullets">
-            <h1>Command Center</h1>
-          </BasePlatoon>
-      </div>      
+        <BasePlatoon :bullets="bullets">
+          <h1>Command Center</h1>
+        </BasePlatoon>
+      </div>
     </div>
     <div class="row">
-        <div class="col-sm">
+      <div class="col-sm">
         <PlattonA></PlattonA>
       </div>
       <div class="col-sm">
@@ -21,26 +21,18 @@
 <script>
 import PlattonA from "@/components/PlattonA.vue";
 import PlattonB from "@/components/PlattonB.vue";
-import BasePlatoon from '@/components/BasePlatoon.vue';
+import BasePlatoon from "@/components/BasePlatoon.vue";
 
 export default {
   components: {
     PlattonA,
     PlattonB,
-    BasePlatoon
+    BasePlatoon,
   },
   data() {
     return {
       bullets: 200000,
     };
-  },
-  computed: {
-    timeNeedForReSupply() {
-      return Math.round(this.bullets / 2 / 60 / 60);
-    },
-  },
-  methods: {
-    sendSupply() {},
   },
 };
 </script>

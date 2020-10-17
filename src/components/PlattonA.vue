@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BasePlatoon from '@/components/BasePlatoon.vue';
+import BasePlatoon from "@/components/BasePlatoon.vue";
 
 export default {
   components: {
@@ -17,14 +17,6 @@ export default {
     return {
       bullets: 30000,
     };
-  },
-  computed: {
-    timeNeedForReSupply() {
-      return Math.round(this.bullets / 2 / 60 / 60);
-    },
-  },
-  methods: {
-    sendSupply() {},
   },
 };
 </script>
