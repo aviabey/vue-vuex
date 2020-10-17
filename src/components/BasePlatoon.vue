@@ -9,7 +9,8 @@
       </div>
       <input
         type="Number"
-        v-model="bullets"
+        v-model="bulletCount"
+        @change="bulletCountChanged($event)"
         class="form-control"
         aria-label="Default"
         aria-describedby="inputGroup-sizing-default"
@@ -31,6 +32,16 @@ export default {
     bullets: {
       type: Number,
       default: 0,
+    },
+  },
+  data() {
+    return {
+      bulletCount: this.bullets,
+    };
+  },
+  methods: {
+    bulletCountChanged(event) {
+      this.bullets = this.bulletCount;
     },
   },
 };
