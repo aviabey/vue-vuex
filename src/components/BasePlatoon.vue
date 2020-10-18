@@ -1,7 +1,7 @@
 <template>
   <div class="border border-primary px-4 mb-3">
     <slot name="title-top" />
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 mt-2">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default"
           >Bullets</span
@@ -36,13 +36,13 @@ export default {
   },
   data() {
     return {
-      bulletCount: this.bullets
-    }
+      bulletCount: this.bullets,
+    };
   },
   methods: {
     bulletCountChanged(event) {
       this.$emit("bulletCountChanged", Number(event.target.value));
-    }
+    },
   },
 };
 </script>
