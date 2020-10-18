@@ -1,34 +1,25 @@
 <template>
   <BasePlatoon
-    :bullets="bulletCount"
+    :bullets="$_BulletCountMixin_bulletCountCommandCenter"
     @bulletCountChanged="updateBulletCount($event)"
   >
     <h1 slot="title-top">Command Center</h1>
     <div slot="other-platoon">
-      <p>Platoon A got {{ platoonABulletCount }} bullets</p>
-      <p>Platoon B got {{ platoonBBulletCount }} bullets</p>
+      <p>Platoon A got {{ $_BulletCountMixin_bulletCountPlatoonA }} bullets</p>
+      <p>Platoon B got {{ $_BulletCountMixin_bulletCountPlatoonB }} bullets</p>
     </div>
   </BasePlatoon>
 </template>
 
 <script>
 import BasePlatoon from "@/components/BasePlatoon.vue";
+import BulletCountMixin from "@/mixins/BulletCountMixin.js";
 
 export default {
   components: {
     BasePlatoon,
   },
-  computed: {
-    bulletCount() {
-      return this.$store.state.bulletsCommandCenter;
-    },
-    platoonABulletCount() {
-      return this.$store.state.bulletsPlatoonA;
-    },
-    platoonBBulletCount() {
-      return this.$store.state.bulletsPlatoonB;
-    },
-  },
+  mixins: [BulletCountMixin],
   destroyed() {
     this.$off("bulletCountChanged");
   },
