@@ -8,10 +8,10 @@
       <p>Platoon A got {{ $_BulletCountMixin_bulletCountPlatoonA }} bullets</p>
       <p>Platoon B got {{ $_BulletCountMixin_bulletCountPlatoonB }} bullets</p>
     </div>
-    <template slot="title-bottom" v-for="number in numbers">
-      <p>{{ number }}</p>
+    <div slot="title-bottom" v-for="number in numbers">
+      <p>{{number}}</p>
       <p>----------</p>
-    </template>
+    </div>
   </BasePlatoon>
 </template>
 
