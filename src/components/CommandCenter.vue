@@ -5,12 +5,8 @@
   >
     <h1 slot="title-top">Command Center</h1>
     <div slot="other-platoon">
-      <p>
-        Platoon A got {{ platoonABulletCount }} bullets
-      </p>
-      <p>
-        Platoon B got {{ platoonBBulletCount }} bullets
-      </p>
+      <p>Platoon A got {{ platoonABulletCount }} bullets</p>
+      <p>Platoon B got {{ platoonBBulletCount }} bullets</p>
     </div>
   </BasePlatoon>
 </template>
