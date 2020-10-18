@@ -8,7 +8,11 @@
       <p>Platoon A got {{ $_BulletCountMixin_bulletCountPlatoonA }} bullets</p>
       <p>Platoon B got {{ $_BulletCountMixin_bulletCountPlatoonB }} bullets</p>
     </div>
-    <template slot="title-bottom" v-for="number in oddNumbers">
+    <template
+      slot="title-bottom"
+      v-for="number in numbers"
+      v-if="isOdd(number)"
+    >
       <p>{{ number }}</p>
       <p>----------</p>
     </template>
@@ -28,11 +32,6 @@ export default {
     return {
       numbers: [1, 2, 3, 4, 5],
     };
-  },
-  computed: {
-    oddNumbers() {
-      return this.numbers.filter((number) => this.isOdd(number));
-    },
   },
   destroyed() {
     this.$off("bulletCountChanged");
