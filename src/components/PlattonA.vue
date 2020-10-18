@@ -29,6 +29,9 @@ export default {
       return this.$store.state.bulletsPlatoonB;
     },
   },
+  destroyed() {
+    this.$off("bulletCountChanged");
+  },
   methods: {
     updateBulletCount(event) {
       this.$store.dispatch("UpdatePlatoonABulletCount", event);
