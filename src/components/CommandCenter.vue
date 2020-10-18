@@ -8,6 +8,10 @@
       <p>Platoon A got {{ $_BulletCountMixin_bulletCountPlatoonA }} bullets</p>
       <p>Platoon B got {{ $_BulletCountMixin_bulletCountPlatoonB }} bullets</p>
     </div>
+    <div slot="title-bottom" v-for="number in numbers">
+      <p>{{number}}</p>
+      <p>----------</p>
+    </div>
   </BasePlatoon>
 </template>
 
@@ -20,13 +24,20 @@ export default {
     BasePlatoon,
   },
   mixins: [BulletCountMixin],
+  data() {
+    return {
+      numbers: [1, 2, 3, 4, 5],
+    };
+  },
   destroyed() {
     this.$off("bulletCountChanged");
   },
   methods: {
     async updateBulletCount(event) {
       await this.$store.dispatch("UpdateCommandCenterBulletCount", event);
-      console.log("I'm exiting the updateBulletCount method of CommandCenter component");
+      console.log(
+        "I'm exiting the updateBulletCount method of CommandCenter component"
+      );
     },
   },
 };
