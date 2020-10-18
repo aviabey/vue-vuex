@@ -1,13 +1,12 @@
 <template>
-  <BasePlatoon :bullets="bulletCount" @bulletCountChanged="updateBulletCount($event)">
+  <BasePlatoon
+    :bullets="bulletCount"
+    @bulletCountChanged="updateBulletCount($event)"
+  >
     <h2 slot="title-bottom">Platoon A</h2>
     <div slot="other-platoon">
-      <p>
-        Command Center got {{ commandCenterBulletCount }} bullets
-      </p>
-      <p>
-        Platoon B got {{ platoonBBulletCount }} bullets
-      </p>
+      <p>Command Center got {{ commandCenterBulletCount }} bullets</p>
+      <p>Platoon B got {{ platoonBBulletCount }} bullets</p>
     </div>
   </BasePlatoon>
 </template>
