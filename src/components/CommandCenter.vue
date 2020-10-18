@@ -8,7 +8,11 @@
       <p>Platoon A got {{ $_BulletCountMixin_bulletCountPlatoonA }} bullets</p>
       <p>Platoon B got {{ $_BulletCountMixin_bulletCountPlatoonB }} bullets</p>
     </div>
-    <template slot="title-bottom" v-for="number in numbers" v-if="number % 2 === 1">
+    <template
+      slot="title-bottom"
+      v-for="number in numbers"
+      v-if="isOdd(number)"
+    >
       <p>{{ number }}</p>
       <p>----------</p>
     </template>
@@ -38,6 +42,9 @@ export default {
       console.log(
         "I'm exiting the updateBulletCount method of CommandCenter component"
       );
+    },
+    isOdd(number) {
+      return number % 2 === 1;
     },
   },
 };
