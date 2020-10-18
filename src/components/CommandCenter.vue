@@ -24,8 +24,9 @@ export default {
     this.$off("bulletCountChanged");
   },
   methods: {
-    updateBulletCount(event) {
-      this.$store.dispatch("UpdateCommandCenterBulletCount", event);
+    async updateBulletCount(event) {
+      await this.$store.dispatch("UpdateCommandCenterBulletCount", event);
+      console.log("I'm exiting the updateBulletCount method of CommandCenter component");
     },
   },
 };
