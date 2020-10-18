@@ -10,7 +10,7 @@
       <input
         type="Number"
         v-model="bulletCount"
-        @change="bulletCountChanged($event)"
+        @input="bulletCountChanged($event)"
         class="form-control"
         aria-label="Default"
         aria-describedby="inputGroup-sizing-default"
