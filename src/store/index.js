@@ -34,10 +34,6 @@ export default new Vuex.Store({
   actions: {
     UpdateCommandCenterBulletCount(context, newCount) {
       context.commit('UpdateCommandCenterBulletCount', newCount)
-
-      setTimeout(() => {
-        console.log("I'm inside the action method of store");
-      }, 2000)
     },
     UpdatePlatoonABulletCount(context, newCount) {
       context.commit('UpdatePlatoonABulletCount', newCount)
